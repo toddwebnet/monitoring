@@ -23,7 +23,8 @@ class Toplog extends Migration
         Schema::create('top_logs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('ip');
-            $table->json('top');
+            # $table->json('top');
+            $table->longText('top');
             $table->decimal('cpu_usage');
             $table->decimal('mem_usage');
             $table->decimal('swap_usage');
