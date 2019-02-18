@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ips;
-use App\Models\TopLogs;
+use App\Models\TopLog;
 use App\Services\TopParser;
 use Illuminate\Http\Request;
 
@@ -29,7 +29,7 @@ class TopController extends Controller
             'mem_usage'=> $logentry['mem']['usage'],
             'swap_usage'=> $logentry['swap']['usage'],
         ];
-        TopLogs::create($data);
+        TopLog::create($data);
 
         return $logentry;
     }

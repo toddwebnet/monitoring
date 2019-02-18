@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TopLogs extends Model
+class TopLog extends Model
 {
     protected $fillable = [
         'ip',
